@@ -3,7 +3,7 @@
 var Player = function(attributes) {
 	var attributes = attributes || {};
 	this.name = attributes.name;
-	this.health = 100;
+	this.ego = 100;
 	this.attack = function(target) {
 		attackResult(this, target);
 	};
@@ -13,13 +13,13 @@ var Player = function(attributes) {
 var Enemy = function(attributes) {
 	var attributes = attributes || {};
 	this.name = attributes.name;
-	this.health = 100;
+	this.ego = 100;
 	this.element = attributes.element;
 };
 
 // Variables and player elements
 
-var playerHealth = $('#playerHealth')
+var playerEgo = $('#playerEgo'),
 		attackButton = $('#playerAttack');
 
 // Create player
@@ -38,3 +38,6 @@ var bawse = new Enemy ({
 
 // Player attack
 
+attackButton.on('click', function () {
+	fitty.attack(bawse);
+});
