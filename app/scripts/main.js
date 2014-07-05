@@ -1,7 +1,7 @@
 // Constructors
 
 var Player = function(attributes) {
-	var attributes = || {};
+	var attributes = attributes || {};
 	this.name = attributes.name;
 	this.health = 100;
 	this.attack = function(target) {
@@ -20,8 +20,7 @@ var Enemy = function(attributes) {
 // Variables and player elements
 
 var playerHealth = $('#playerHealth')
-		attackButton = $('#playerAttack'),
-    damage;
+		attackButton = $('#playerAttack');
 
 // Create player
 
