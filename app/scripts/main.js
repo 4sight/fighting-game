@@ -17,8 +17,25 @@ var Enemy = function(attributes) {
 	this.element = attributes.element;
 };
 
+// Variables and player elements
+
+var playerHealth = $('#playerHealth')
+		attackButton = $('#playerAttack'),
+    damage;
+
 // Create player
 
-var 
+var fitty = new Player({
+	name: '50 Cent',
+	element: $('.player')
+});
 
-'Name your fighter'
+// Create monster
+
+var bawse = new Enemy ({
+	name: 'Rick Ross',
+	element: $('.monster')
+});
+
+// Player attack
+
