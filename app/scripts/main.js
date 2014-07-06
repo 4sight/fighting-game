@@ -55,7 +55,7 @@ var playerEgo = $('#playerEgo'),
 					nickname: 'YAYO',
 					});
 			  }
-		// alert('OOOO KILL \'EM ' . fighter.nickname . '!');
+		alert('OOOO KILL \'EM ' + fighter.nickname + '!');
 	  window.open("game.html");
 	})
 });
