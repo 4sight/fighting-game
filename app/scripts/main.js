@@ -3,6 +3,7 @@
 var Player = function(attributes) {
 	var attributes = attributes || {};
 	this.name = attributes.name;
+	this.nicknae = attributes.nickname;
 	this.ego = 100;
 	this.attack = function(target) {
 		attackResult(this, target);
@@ -24,9 +25,43 @@ var playerEgo = $('#playerEgo'),
 
 // Create player
 
-var fitty = new Player({
+$('select').on('change', function (){
+  
+  alert('OOOO KILL \'EM !'),
+  // window.open("game.html", "_self");
+  
+  if ($(this).val() == 1){
+    var fitty = new Player({
 		name: '50 Cent',
+		nickname: 'FITTY',
 		element: $('.player')
+		});
+  }
+  
+  if ($(this).val() == 2){
+    var game = new Player({
+		name: 'Game',
+		nickname: 'GAME',
+		element: $('.player')
+		});
+  }  
+
+  if ($(this).val() == 3){
+    var banks = new Player({
+		name: 'Lloyd Banks',
+		nickname: 'BANKS',
+		element: $('.player')
+		});
+  }  
+
+  if ($(this).val() == 4){
+    var yayo = new Player({
+		name: 'Tony Yayo',
+		nickname: 'YAYO',
+		element: $('.player')
+		});
+  }  
+
 });
 
 // Create monster
@@ -46,8 +81,8 @@ var attackResult = function (attacker, attacked) {
 
 	// Reset attack button
 
-	attackButton.prop('disabled', false).text('Attack!');
 	var damage = _.random(5, 30);
+	attackButton.prop('disabled', false).text('Attack!');
 	attacked.ego -= damage;
 
 	// If/Else function to lower ego if attacked is still alive
