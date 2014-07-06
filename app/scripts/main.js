@@ -20,13 +20,13 @@ var Enemy = function(attributes) {
 // Variables and player elements
 
 var playerEgo = $('#playerEgo'),
-		attackButton = $('#playerAttack'),
+		attackButton = $('#playerAttack');
 
 // Create player
 
 var fitty = new Player({
-	name: '50 Cent',
-	element: $('.player')
+		name: '50 Cent',
+		element: $('.player')
 });
 
 // Create monster
@@ -57,7 +57,7 @@ var attackResult = function (attacker, attacked) {
 
 		// Monster attacks
 
-		if (attacked instanceof Monster) {
+		if (attacked instanceof Enemy) {
 			console.log('Shots fired!!');
 			attackButton.prop('disabled', true).text('Reeling...');
 			_.delay(attackResult, 600, attacked, attacker);
