@@ -56,8 +56,8 @@ $('form').on('submit', function () {
 			});
 	  }
 	})
-	  alert('OOOO KILL \'EM ' . this.nickname . ' !');
-	  // window.open("game.html", "_self");
+	  // alert('OOOO KILL \'EM ' . this.nickname . '!');
+	  window.open("game.html");
 });
 
 // Create monster
