@@ -3,7 +3,7 @@
 var Player = function(attributes) {
 	var attributes = attributes || {};
 	this.name = attributes.name;
-	this.nicknae = attributes.nickname;
+	this.nickname = attributes.nickname;
 	this.ego = 100;
 	this.attack = function(target) {
 		attackResult(this, target);
@@ -21,43 +21,43 @@ var Enemy = function(attributes) {
 // Variables and player elements
 
 var playerEgo = $('#playerEgo'),
-		attackButton = $('#playerAttack');
+		attackButton = $('#playerAttack'),
+		fighter;
 
 // Create player
 
-$('form').on('submit', function () {
-	$('select').on('change', function (){
-	  
-	  if ($(this).val() == 1){
-	    var fighter = new Player({
-			name: '50 Cent',
-			nickname: 'FITTY',
-			});
-	  }
-	  
-	  if ($(this).val() == 2){
-	    var fighter = new Player({
-			name: 'Game',
-			nickname: 'GAME',
-			});
-	  }  
+	$('form').on('submit', function () {
+		$('select').each(function () {
+			  if ($(this).val() == 1) {
+			    var fighter = new Player({
+					name: '50 Cent',
+					nickname: 'FITTY',
+					});
+			  }
 
-	  if ($(this).val() == 3){
-	    var fighter = new Player({
-			name: 'Lloyd Banks',
-			nickname: 'BANKS',
-			});
-	  }  
+			  if ($(this).val() == 2){
+			    var fighter = new Player({
+					name: 'Game',
+					nickname: 'GAME',
+					});
+			  }  
 
-	  if ($(this).val() == 4){
-	    var fighter = new Player({
-			name: 'Tony Yayo',
-			nickname: 'YAYO',
-			});
-	  }
-	})
-	  // alert('OOOO KILL \'EM ' . this.nickname . '!');
+			  if ($(this).val() == 3){
+			    var fighter = new Player({
+					name: 'Lloyd Banks',
+					nickname: 'BANKS',
+					});
+			  }  
+
+			  if ($(this).val() == 4){
+			    var fighter = new Player({
+					name: 'Tony Yayo',
+					nickname: 'YAYO',
+					});
+			  }
+		// alert('OOOO KILL \'EM ' . fighter.nickname . '!');
 	  window.open("game.html");
+	})
 });
 
 // Create monster
