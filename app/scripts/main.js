@@ -29,28 +29,28 @@ $('form').on('submit', function () {
 	$('select').on('change', function (){
 	  
 	  if ($(this).val() == 1){
-	    var fitty = new Player({
+	    var fighter = new Player({
 			name: '50 Cent',
 			nickname: 'FITTY',
 			});
 	  }
 	  
 	  if ($(this).val() == 2){
-	    var game = new Player({
+	    var fighter = new Player({
 			name: 'Game',
 			nickname: 'GAME',
 			});
 	  }  
 
 	  if ($(this).val() == 3){
-	    var banks = new Player({
+	    var fighter = new Player({
 			name: 'Lloyd Banks',
 			nickname: 'BANKS',
 			});
 	  }  
 
 	  if ($(this).val() == 4){
-	    var yayo = new Player({
+	    var fighter = new Player({
 			name: 'Tony Yayo',
 			nickname: 'YAYO',
 			});
