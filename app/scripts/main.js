@@ -60,12 +60,14 @@ var attackResult = function (attacker, attacked) {
 		if (attacked instanceof Monster) {
 			console.log('Shots fired!!');
 			attackButton.prop('disabled', true).text('Reeling...');
-			_.delay(attackResult, 100, attacked, attacker);
+			_.delay(attackResult, 600, attacked, attacker);
 		}
 	} else {
 
 		if (attacked instanceof Player) {
-			
+			$('body').empty().css('background', 'url(http://goo.gl/0fmNnb)');
+		} else {
+			$('body').empty().css('background', 'url(http://images.nymag.com/images/2/daily/2011/04/20_rickrosswheelchair.gif)');
 		}
 	}
-}
+};
