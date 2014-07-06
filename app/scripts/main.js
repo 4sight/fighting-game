@@ -20,7 +20,7 @@ var Enemy = function(attributes) {
 // Variables and player elements
 
 var playerEgo = $('#playerEgo'),
-		attackButton = $('#playerAttack');
+		attackButton = $('#playerAttack'),
 
 // Create player
 
@@ -48,12 +48,12 @@ var attackResult = function (attacker, attacked) {
 
 	attackButton.prop('disabled', false).text('Attack!');
 	var damage = _.random(5, 30);
-	attacked.health -= damage;
+	attacked.ego -= damage;
 
-	// If/Else function to lower health if attacked is still alive
+	// If/Else function to lower ego if attacked is still alive
 
-	if (attacked.health > 0) {
-		attacked.element.find('input').val(attacked.health);
+	if (attacked.ego > 0) {
+		attacked.element.find('input').val(attacked.ego);
 
 		// Monster attacks
 
