@@ -8,7 +8,7 @@ var Player = function(attributes) {
 	this.attack = function(target) {
 		attackResult(this, target);
 	};
-	this.element = attributes.element;
+	this.element = $('.player');
 };
 
 var Enemy = function(attributes) {
@@ -25,43 +25,39 @@ var playerEgo = $('#playerEgo'),
 
 // Create player
 
-$('select').on('change', function (){
-  
-  alert('OOOO KILL \'EM !'),
-  // window.open("game.html", "_self");
-  
-  if ($(this).val() == 1){
-    var fitty = new Player({
-		name: '50 Cent',
-		nickname: 'FITTY',
-		element: $('.player')
-		});
-  }
-  
-  if ($(this).val() == 2){
-    var game = new Player({
-		name: 'Game',
-		nickname: 'GAME',
-		element: $('.player')
-		});
-  }  
+$('form').on('submit', function () {
+	$('select').on('change', function (){
+	  
+	  if ($(this).val() == 1){
+	    var fitty = new Player({
+			name: '50 Cent',
+			nickname: 'FITTY',
+			});
+	  }
+	  
+	  if ($(this).val() == 2){
+	    var game = new Player({
+			name: 'Game',
+			nickname: 'GAME',
+			});
+	  }  
 
-  if ($(this).val() == 3){
-    var banks = new Player({
-		name: 'Lloyd Banks',
-		nickname: 'BANKS',
-		element: $('.player')
-		});
-  }  
+	  if ($(this).val() == 3){
+	    var banks = new Player({
+			name: 'Lloyd Banks',
+			nickname: 'BANKS',
+			});
+	  }  
 
-  if ($(this).val() == 4){
-    var yayo = new Player({
-		name: 'Tony Yayo',
-		nickname: 'YAYO',
-		element: $('.player')
-		});
-  }  
-
+	  if ($(this).val() == 4){
+	    var yayo = new Player({
+			name: 'Tony Yayo',
+			nickname: 'YAYO',
+			});
+	  }
+	})
+	  alert('OOOO KILL \'EM ' . this.nickname . ' !');
+	  // window.open("game.html", "_self");
 });
 
 // Create monster
