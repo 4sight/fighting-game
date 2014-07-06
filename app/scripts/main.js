@@ -41,3 +41,10 @@ var bawse = new Enemy ({
 attackButton.on('click', function () {
 	fitty.attack(bawse);
 });
+
+var attackResult = function (attacker, attacked) {
+
+	// Reset attack button
+
+	attackButton.prop('disabled', false).text('Attack!');
+}
