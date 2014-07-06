@@ -48,7 +48,7 @@ var attackResult = function (attacker, attacked) {
 
 	attackButton.prop('disabled', false).text('Attack!');
 	var damage = _.random(5, 30);
-	atacked.health -= damage;
+	attacked.health -= damage;
 
 	// If/Else function to lower health if attacked is still alive
 
