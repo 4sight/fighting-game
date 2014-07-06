@@ -47,4 +47,25 @@ var attackResult = function (attacker, attacked) {
 	// Reset attack button
 
 	attackButton.prop('disabled', false).text('Attack!');
+	var damage = _.random(5, 30);
+	atacked.health -= damage;
+
+	// If/Else function to lower health if attacked is still alive
+
+	if (attacked.health > 0) {
+		attacked.element.find('input').val(attacked.health);
+
+		// Monster attacks
+
+		if (attacked instanceof Monster) {
+			console.log('Shots fired!!');
+			attackButton.prop('disabled', true).text('Reeling...');
+			_.delay(attackResult, 100, attacked, attacker);
+		}
+	} else {
+
+		if (attacked instanceof Player) {
+			
+		}
+	}
 }
