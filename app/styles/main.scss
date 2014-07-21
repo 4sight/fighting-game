@@ -5,6 +5,23 @@
 // Custom Styles
 body {
   text-align: center;
+  margin-top: 50px;
+}
+
+#selector {
+  @include outer-container;
+  margin-top: 30px;
+  width: 95%;
+  .enemy {
+    @include span-columns(3);
+    display: inline-block;
+    img {
+      margin-top: 10px;
+    }
+    a {
+      text-decoration: none;
+    }
+  }
 }
 
 #playerHealth {
@@ -19,13 +36,4 @@ button {
   width: 100px;
   height: 50px;
   cursor: pointer;
-}
-
-div.enemy {
-  margin-bottom: 25px;
-}
-
-div.enemy input {
-  width: 50px;
-  margin-left: 25px;
 }
