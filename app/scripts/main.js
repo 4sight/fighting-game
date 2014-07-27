@@ -26,12 +26,6 @@ var playerEgo = $('#playerEgo'),
 
 // Create player
 
-document.getElementById('50').onClick = function(){
-	var character = '50';
-	return character;
-};
-console.log(character);
-
 $('form').on('submit', function () {
 	$('select').each(function () {
 		  if ($(this).val() == 1) {
